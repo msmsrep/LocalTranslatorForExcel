@@ -1,0 +1,119 @@
+#root {
+  /* レスポンシブ対応のために。固定ではなく100% */
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.language-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.textbox-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* width: 800px; */
+}
+
+.textbox-container > textarea,
+.language-selector {
+  width: 50%;
+}
+
+.language-selector > select {
+  width: 150px;
+}
+
+.progress-container {
+  position: relative;
+  font-size: 14px;
+  color: white;
+  background-color: #e9ecef;
+  border: solid 1px;
+  border-radius: 8px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.progress-bar {
+  padding: 0 4px;
+  z-index: 0;
+  top: 0;
+  width: 1%;
+  overflow: hidden;
+  background-color: #007bff;
+  white-space: nowrap;
+}
+
+.progress-text {
+  z-index: 2;
+}
+
+.selector-container {
+  display: flex;
+  gap: 20px;
+}
+
+.progress-bars-container {
+  padding: 8px;
+  height: 140px;
+}
+
+.container {
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* レスポンシブ対応のために */
+/* @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .sidebar {
+    display: none;
+  }
+} */
+
+/* メディアクエリでスマホ対応 */
+@media screen and (max-width: 768px) {
+  .textbox-container {
+    width: 100%;
+    flex-direction: column;
+  }
+  .textbox-container > textarea,
+  .language-selector {
+    width: 100%;
+  }
+
+  /* .language-container {
+    flex-direction: column;
+  } */
+
+  button {
+    width: 100%;
+  }
+  .progress-bars-container {
+    width: 100%;
+  }
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem; /* ボタン間のスペース */
+  justify-content: center; /* 中央揃え（任意） */
+  margin-top: 1rem;
+}
+
+/* .button-group button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+} */

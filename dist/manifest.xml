@@ -5,15 +5,15 @@
   xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>97b8a62f-7727-4890-b2de-cbca873a424e</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Contoso</ProviderName>
+  <ProviderName>github.io</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="LocalTranslatorForExcel"/>
   <Description DefaultValue="A template to get started."/>
   <IconUrl DefaultValue="https://msmsrep.github.io/LocalTranslatorForExcel/dist/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://msmsrep.github.io/LocalTranslatorForExcel/dist/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <SupportUrl DefaultValue="https://msmsrep.github.io"/>
   <AppDomains>
-    <AppDomain>https://www.contoso.com</AppDomain>
+    <AppDomain>https://msmsrep.github.io</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Workbook"/>

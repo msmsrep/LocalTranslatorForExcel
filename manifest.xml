@@ -19,9 +19,6 @@
     <Host Name="Workbook"/>
   </Hosts>
   <DefaultSettings>
-    <!-- 変更 -->
-    <!-- webpack.config.jsのHtmlWebpackPluginに合わせて -->
-    <!-- <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/> -->
     <SourceLocation DefaultValue="https://localhost:3000/index.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
@@ -74,10 +71,6 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
-        <!-- 不要 -->
-        <!-- <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html"/> -->
-        <!-- 変更  webpack.config.jsのHtmlWebpackPluginに合わせて -->
-        <!-- <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/> -->
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/index.html"/>
       </bt:Urls>
       <bt:ShortStrings>

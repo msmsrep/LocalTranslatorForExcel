@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 
 const urlDev = "https://localhost:3000/";
-// const urlProd = "https://www.contoso.com/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
+// CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
 const urlProd = "https://msmsrep.github.io/LocalTranslatorForExcel/dist/";
 
 async function getHttpsOptions() {
@@ -21,20 +21,14 @@ module.exports = async (env, options) => {
     entry: {
       polyfill: ["core-js/stable", "regenerator-runtime/runtime"],
       react: ["react", "react-dom"],
-      // 変更
-      // taskpane: {
       index: {
-        // import: ["./src/taskpane/index.jsx", "./src/taskpane/taskpane.html"],
         import: ["./src/main.jsx", "./src/index.html"],
         dependOn: "react",
       },
-      // 不要
-      // commands: "./src/commands/commands.js",
     },
     output: {
       clean: true,
     },
-    // cssを追加
     resolve: {
       extensions: [".js", ".jsx", ".html", ".css"],
     },
@@ -59,7 +53,6 @@ module.exports = async (env, options) => {
             filename: "assets/[name][ext][query]",
           },
         },
-        // cssについて追加
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
@@ -68,12 +61,6 @@ module.exports = async (env, options) => {
       ],
     },
     plugins: [
-      // 変更
-      // new HtmlWebpackPlugin({
-      //   filename: "taskpane.html",
-      //   template: "./src/taskpane/taskpane.html",
-      //   chunks: ["polyfill", "taskpane", "react"],
-      // }),
       new HtmlWebpackPlugin({
         filename: "index.html",
         template: "./src/index.html",
@@ -98,12 +85,6 @@ module.exports = async (env, options) => {
           },
         ],
       }),
-      // 不要
-      // new HtmlWebpackPlugin({
-      //   filename: "commands.html",
-      //   template: "./src/commands/commands.html",
-      //   chunks: ["polyfill", "commands"],
-      // }),
       new webpack.ProvidePlugin({
         Promise: ["es6-promise", "Promise"],
       }),
@@ -133,7 +114,7 @@ module.exports = async (env, options) => {
       // 詳細なエラー出力
       errorDetails: true,
     },
-    // transformers.jsライブラリでの警告がでるのでチェックをムシ
+    // transformers.jsライブラリでimport\.metaの警告がでるのでムシ
     ignoreWarnings: [
       /Critical dependency: the request of a dependency is an expression/,
       /Critical dependency: 'import\.meta'/

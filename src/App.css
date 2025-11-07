@@ -17,7 +17,6 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  /* width: 800px; */
 }
 
 .textbox-container > textarea,
@@ -72,17 +71,6 @@
 }
 
 /* レスポンシブ対応のために */
-/* @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 10px;
-  }
-  .sidebar {
-    display: none;
-  }
-} */
-
-/* メディアクエリでスマホ対応 */
 @media screen and (max-width: 768px) {
   .textbox-container {
     width: 100%;
@@ -92,10 +80,6 @@
   .language-selector {
     width: 100%;
   }
-
-  /* .language-container {
-    flex-direction: column;
-  } */
 
   button {
     width: 100%;
@@ -107,13 +91,7 @@
 
 .button-group {
   display: flex;
-  gap: 1rem; /* ボタン間のスペース */
-  justify-content: center; /* 中央揃え（任意） */
+  gap: 1rem;
+  justify-content: center;
   margin-top: 1rem;
 }
-
-/* .button-group button {
-  flex: 1;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-} */

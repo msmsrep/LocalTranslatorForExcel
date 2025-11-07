@@ -11,6 +11,7 @@ class MyTranslationPipeline {
   static instance = null;
 
   // webgpuを使うか
+  // 入れると結果がおかしくなる　色々調整必要そう
   static async getInstance(progress_callback = null) {
     this.instance ??= pipeline(this.task, this.model, {
       progress_callback,
